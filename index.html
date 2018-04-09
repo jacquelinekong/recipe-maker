@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="script.js"></script>
+
+  <title> video </title>
+</head>
+
+<body>
+<div id="container">
+  <div class="row">
+    <div class="col-md-5">
+      <video controls autoplay id="vid" >
+        <source src="videos/core_tomato.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary"> Capture </button>
+    </div>
+    <div class="col-md-5">
+      <canvas id="canvas"> </canvas>
+    </div>
+  </div>
+</div>
+</body>
+</html>

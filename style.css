@@ -1,0 +1,12 @@
+video {
+  max-width: 500px;
+}
+
+#container {
+  margin: 30px;
+}
+
+#canvas {
+  width: 500px;
+  height: 282px;
+}
