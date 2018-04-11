@@ -22,7 +22,7 @@ $(document).ready(function() {
     stack: "*"
   });
 
-  $(".btn-primary").on("click", function() {
+  $("#capture").on("click", function() {
     video.pause();
 
     console.log(video.width);
@@ -31,5 +31,16 @@ $(document).ready(function() {
     console.log($("#canvas").height());
 
     ctx.drawImage(video, 0, 0, $("video").width(), $("video").height());
+  })
+
+  $("#add-note").on("click", function() {
+    console.log("add note")
+    var note = $("#note-form").val();
+    var new_note = $("<div>");
+
+    console.log(note);
+    $(new_note).text(note);
+    $("#img-list").append(new_note);
+    $("#note-form").val("");
   })
 })

@@ -14,19 +14,34 @@
 
 <body>
 <div id="container">
+  <div id="header">
+    <h2> Screenshot parts of the recipe as you watch it and add notes </h2>
+  </div>
   <div class="row">
     <div class="col-md-5">
       <div id="vid">
         <video controls autoplay>
-          <source src="videos/core_tomato1.mp4" type="video/mp4">
+          <source src="videos/souffle.mp4" type="video/mp4">
         </video>
       </div>
     </div>
     <div class="col-md-2">
-      <button type="button" class="btn btn-primary"> Capture </button>
+      <button type="button" class="btn btn-primary" id="capture"> Capture </button>
     </div>
     <div class="col-md-5" id="img-list">
       <canvas id="canvas"> </canvas>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5" id="test">
+      <form>
+        <div class="form-group">
+          <label for="note-form">Your notes:</label>
+          <textarea class="form-control" id="note-form" rows="3"></textarea>
+          <button type="button" class="btn btn-primary" id="add-note"> Add Note </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
