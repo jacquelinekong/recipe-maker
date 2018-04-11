@@ -16,14 +16,16 @@
 <div id="container">
   <div class="row">
     <div class="col-md-5">
-      <video controls autoplay id="vid" >
-        <source src="videos/core_tomato.mp4" type="video/mp4">
-      </video>
+      <div id="vid">
+        <video controls autoplay>
+          <source src="videos/core_tomato1.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
     <div class="col-md-2">
       <button type="button" class="btn btn-primary"> Capture </button>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5" id="img-list">
       <canvas id="canvas"> </canvas>
     </div>
   </div>

@@ -18,12 +18,15 @@ $(document).ready(function() {
 
   var canvas = $("#canvas").get(0);
   var ctx = canvas.getContext('2d');
+  $("#canvas").draggable({
+    stack: "*"
+  });
 
   $(".btn-primary").on("click", function() {
     video.pause();
 
-    console.log($("video").width());
-    console.log($("video").height());
+    console.log(video.width);
+    console.log(video.height);
     console.log($("#canvas").width());
     console.log($("#canvas").height());
 
