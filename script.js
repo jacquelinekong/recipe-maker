@@ -25,12 +25,12 @@ $(document).ready(function() {
   $("#capture").on("click", function() {
     video.pause();
 
-    console.log($("video").width());
-    console.log($("video").height());
+    console.log(canvas.width);
+    console.log(canvas.height);
     console.log($("#canvas").width());
     console.log($("#canvas").height());
 
-    ctx.drawImage(video, 0, 0, $("video").width(), $("video").height());
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
   })
 
   $("#add-note").on("click", function() {
