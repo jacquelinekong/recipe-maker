@@ -10,8 +10,12 @@ video {
   margin-top: 20px;
 }
 
-#add-note {
+#note-interface {
   margin-top: 30px;
+}
+
+#add-note {
+  margin-top: 10px;
 }
 
 #recipe-list {

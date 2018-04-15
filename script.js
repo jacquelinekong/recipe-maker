@@ -10,6 +10,15 @@ function takeScreenshot(source, dest) {
   // var dataURI = canvas.toDataURL('image/jpeg');
 }
 
+function addNote(dest) {
+  var note = $("#note-form").val();
+  var new_note = $("<div>");
+  $(new_note).text(note);
+
+  dest.append(new_note);
+  $("#note-form").val("");
+}
+
 $(document).ready(function() {
   var video = $("video").get(0);
   video.pause();
@@ -28,19 +37,12 @@ $(document).ready(function() {
 
   $("#capture").on("click", function() {
     video.pause();
-
     takeScreenshot(video, $("#recipe-list"));
-
   })
 
   $("#add-note").on("click", function() {
-    console.log("add note")
-    var note = $("#note-form").val();
-    var new_note = $("<div>");
-
-    console.log(note);
-    $(new_note).text(note);
-    $("#img-list").append(new_note);
-    $("#note-form").val("");
+    console.log("add note");
+    addNote($("#recipe-list"));
+    video.play();
   })
 })
