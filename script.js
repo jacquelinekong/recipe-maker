@@ -1,6 +1,15 @@
 // Jacqueline Kong
 // jek2179
 
+function takeScreenshot(source, dest) {
+  var canvas = document.createElement("canvas");
+  var ctx = canvas.getContext('2d');
+
+  ctx.drawImage(source, 0, 0, canvas.width, canvas.height);
+  dest.append(canvas);
+  // var dataURI = canvas.toDataURL('image/jpeg');
+}
+
 $(document).ready(function() {
   var video = $("video").get(0);
   video.pause();
@@ -17,25 +26,11 @@ $(document).ready(function() {
   //   }
   // }))
 
-  var canvas = $("#canvas").get(0);
-  var ctx = canvas.getContext('2d');
-  $("#canvas").draggable({
-    stack: "*"
-  });
-
   $("#capture").on("click", function() {
     video.pause();
 
-    aspect = $("video").height() / $("video").width();
+    takeScreenshot(video, $("#recipe-list"));
 
-    console.log("canvas.width " + canvas.width);
-    console.log("canvas.height " + canvas.height);
-    console.log("$(\"video\").height() " + $("video").height());
-    console.log("$(\"video\").width() " + $("video").width());
-    console.log((canvas.width * aspect));
-
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-    // var dataURI = canvas.toDataURL('image/jpeg');
   })
 
   $("#add-note").on("click", function() {
