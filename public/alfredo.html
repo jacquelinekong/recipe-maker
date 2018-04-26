@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="script.js"></script>
+
+  <title> Make-a-Recipe </title>
+</head>
+
+<body>
+<div id="container">
+
+  <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand">
+            Make-a-Recipe
+          </a>
+        </div>
+        <!-- <div class="collapse navbar-collapse" id="exampleNavComponents">
+          <ul class="nav navbar-nav navbar-right">
+            <li id="home-button" class="active">
+              <a href="#">Home</a>
+            </li>
+            <li id="log-button">
+              <a href="#">Log Sale</a>
+            </li>
+            <li id="party-button">
+              <a href="#">Party Planning Committee</a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+  </nav>
+
+  <div id="video-container">
+    <div class="row">
+    <div class="col-md-6" id="video-interface">
+      <div id="vid">
+        <video controls autoplay>
+          <source src="videos/alfredo-bowl.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="row">
+        <div class="col-md-10">
+          <form>
+            <div class="form-group" id="note-interface">
+              <label for="note-form">Your notes:</label>
+              <textarea class="form-control" id="note-form" rows="3"></textarea>
+              <button type="button" class="btn btn-primary" id="add-note"> Add Note </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary" id="capture"> Capture </button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-6" id="recipe-list"> </div>
+    </div>
+  </div>
+
+
+
+</div>
+</body>
+</html>
