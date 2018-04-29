@@ -15,8 +15,10 @@ function takeScreenshot(source, dest) {
 
   new_div.append(new_image);
   dest.append(new_div);
-
-  // $.post("", $(data), );
+  // dest.prop('scrollHeight');
+  console.log(dest.scrollTop());
+  console.log(dest.prop('scrollHeight'));
+  dest.scrollTop(dest.prop('scrollHeight'));
 }
 
 function addNote(dest) {
