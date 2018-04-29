@@ -15,9 +15,6 @@ function takeScreenshot(source, dest) {
 
   new_div.append(new_image);
   dest.append(new_div);
-  // dest.prop('scrollHeight');
-  console.log(dest.scrollTop());
-  console.log(dest.prop('scrollHeight'));
   dest.scrollTop(dest.prop('scrollHeight'));
 }
 
@@ -28,11 +25,18 @@ function addNote(dest) {
 
   dest.append(new_note);
   $("#note-form").val("");
+  dest.scrollTop(dest.prop('scrollHeight'));
+}
+
+function switchButton(old_button, new_button) {
+  old_button.hide();
+  new_button.show();
 }
 
 $(document).ready(function() {
   var video = $("video").get(0);
   video.pause();
+  $("#pause").hide();
 
   // /* play/pause with spacebar */
   // $(window).on("keypress", (function(e) {
@@ -71,8 +75,18 @@ $(document).ready(function() {
     $("#recipe-list").toggleClass('col-md-6 col-md-12');
   })
 
-  $("#back-10").on("click", function() {
-    console.log("back-10");
-    video.currentTime -= 10;
+  $("#back-5").on("click", function() {
+    console.log("back");
+    video.currentTime -= 5;
+  })
+
+  $("#play").on("click", function() {
+    switchButton($("#play"), $("#pause"));
+    video.play();
+  })
+
+  $("#pause").on("click", function() {
+    switchButton($("#pause"), $("#play"));
+    video.pause();
   })
 })

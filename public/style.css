@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Garlic Salt";
+  src: url("fonts/GarlicSalt-Regular.otf") format("otf");
+
+}
+
 video {
   max-width: 100%;
 }
@@ -7,6 +13,21 @@ video {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.navigation {
+  background-color: #3DC3A0;
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 24pt;
+  font-family: "Garlic Salt", serif;
+}
+
+#instructions {
+  font-size: 14pt;
 }
 
 #content > p {
