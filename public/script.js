@@ -55,7 +55,7 @@ $(document).ready(function() {
 
   $("#finished").on("click", function() {
     $("#video-interface").hide();
-    $("#recipe-list").toggleClass('col-md-6 col-md-12');
+    $("#recipe").toggleClass('col-md-6 col-md-12');
   })
 
   $("#back-5").on("click", function() {
