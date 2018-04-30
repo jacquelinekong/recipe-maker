@@ -14,27 +14,18 @@
 
 <body>
 <div id="container">
-
-  <nav class="navbar navbar-default">
+  <nav class="navigation">
       <div class="container">
         <div class="navbar-header">
           <a href="index.html" class="navbar-brand">
             Make-a-Recipe
           </a>
         </div>
-        <!-- <div class="collapse navbar-collapse" id="exampleNavComponents">
-          <ul class="nav navbar-nav navbar-right">
-            <li id="home-button" class="active">
-              <a href="#">Home</a>
+        <!-- <ul class="nav navbar-nav navbar-right">
+            <li id="home-button">
+                <a href="#">Home</a>
             </li>
-            <li id="log-button">
-              <a href="#">Log Sale</a>
-            </li>
-            <li id="party-button">
-              <a href="#">Party Planning Committee</a>
-            </li>
-          </ul>
-        </div> -->
+        </ul> -->
       </div>
   </nav>
 
@@ -51,9 +42,18 @@
           <button type="button" class="btn btn-primary" id="capture"> Capture </button>
         </div>
         <div class="col-md-2">
-          <button type="button" class="btn btn-info" id="back-10"> Back 10 </button>
+          <button type="button" class="btn btn-info" id="back-5"> Back 5 </button>
         </div>
-        <div class="col-md-6"> </div>
+        <div class="col-md-1"> </div>
+        <div class="col-md-1">
+          <button type="button" id="play" class="btn btn-info" aria-label="Left Align">
+              <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+          </button>
+          <button type="button" id="pause" class="btn btn-info" aria-label="Left Align">
+              <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="col-md-4"> </div>
         <div class="col-md-2">
           <button type="button" class="btn btn-success" id="finished"> Finished! </button>
         </div>
@@ -69,7 +69,7 @@
     </div>
 
 
-    <div class="col-md-6" id="recipe-list"> </div>
+      <div class="col-md-6"> <ul id="recipe-list"> </ul> </div>
     </div>
   </div>
 

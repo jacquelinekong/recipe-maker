@@ -8,6 +8,14 @@ video {
   max-width: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
 .thumbnail {
   max-width: 200px;
   display: block;
@@ -24,6 +32,11 @@ video {
   color: white;
   font-size: 24pt;
   font-family: "Garlic Salt", serif;
+}
+
+#add-note {
+  background-color: #5F1E8A;
+  border-color: #5F1E8A;
 }
 
 #instructions {
