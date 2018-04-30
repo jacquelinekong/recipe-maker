@@ -80,7 +80,7 @@ $(document).ready(function() {
   $("#add-note").on("click", function() {
     console.log("add note");
     addNote($("#recipe-list"));
-    video.play();
+    // video.play();
     checkUndo();
   })
 
