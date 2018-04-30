@@ -5,15 +5,11 @@
 }
 
 video {
-  max-height: 300px;
+  max-width: 100%;
 }
 
 ul {
   list-style-type: none;
-}
-
-li {
-  margin-bottom: 10px;
 }
 
 .thumbnail {
@@ -34,9 +30,15 @@ li {
   font-family: "Garlic Salt", serif;
 }
 
+.screenshot {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
 #add-note {
   background-color: #5F1E8A;
   border-color: #5F1E8A;
+  margin-top: 5px;
 }
 
 #instructions {
@@ -61,11 +63,7 @@ li {
   margin-top: 30px;
 }
 
-#add-note {
-  margin-top: 10px;
-}
-
 #recipe-list {
-  height: 500px;
+  height: 450px;
   overflow-y: scroll;
 }

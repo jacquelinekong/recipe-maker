@@ -18,15 +18,15 @@ function takeScreenshot(source, dest) {
   dest.scrollTop(dest.prop('scrollHeight'));
 }
 
-function addNote(dest, count) {
-  var note = count + ". " + $("#note-form").val();
+function addNote(dest) {
+  var note = $("#note-box").val();
   var new_note = $("<div>");
-  var new_item = $("<li>");
+  var new_item = $("<li class=\"note\">");
   $(new_note).text(note);
 
   $(new_item).append(new_note);
   dest.append(new_item);
-  $("#note-form").val("");
+  $("#note-box").val("");
   dest.scrollTop(dest.prop('scrollHeight'));
 }
 
@@ -42,21 +42,43 @@ $(document).ready(function() {
 
   $("#recipe-list").sortable();
 
+  $("video").on("pause", function() {
+    switchButton($("#pause"), $("#play"));
+  })
+
+  $("video").on("play", function() {
+    switchButton($("#play"), $("#pause"));
+  })
+
   $("#capture").on("click", function() {
     video.pause();
     takeScreenshot(video, $("#recipe-list"));
   })
 
-  var note_count = 0;
+  $("#note-box").on("focus", function() {
+    console.log("focus");
+    $(window).on("keypress", (function(e) {
+        if (e.which == 13) {
+          e.preventDefault();
+          console.log("enter");
+          addNote($("#recipe-list"));
+          video.play();
+        }
+    }))
+  })
 
   $("#add-note").on("click", function() {
     console.log("add note");
-    addNote($("#recipe-list"), note_count);
-    note_count+
+    addNote($("#recipe-list"));
     video.play();
   })
 
+  $("#undo").on("click", function() {
+    $("#recipe-list").children().last().remove();
+  })
+
   $("#finished").on("click", function() {
+    video.pause();
     $("#video-interface").hide();
     $("#recipe").toggleClass('col-md-6 col-md-12');
   })
@@ -67,12 +89,10 @@ $(document).ready(function() {
   })
 
   $("#play").on("click", function() {
-    switchButton($("#play"), $("#pause"));
     video.play();
   })
 
   $("#pause").on("click", function() {
-    switchButton($("#pause"), $("#play"));
     video.pause();
   })
 })
