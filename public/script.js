@@ -35,9 +35,18 @@ function switchButton(old_button, new_button) {
   new_button.show();
 }
 
+function checkUndo() {
+  if($("#recipe-list li").length < 1) {
+    $("#undo").hide();
+  } else {
+    $("#undo").show();
+  }
+}
+
 $(document).ready(function() {
   var video = $("video").get(0);
   video.pause();
+  checkUndo();
   $("#pause").hide();
 
   $("#recipe-list").sortable();
@@ -53,6 +62,7 @@ $(document).ready(function() {
   $("#capture").on("click", function() {
     video.pause();
     takeScreenshot(video, $("#recipe-list"));
+    checkUndo();
   })
 
   $("#note-box").on("focus", function() {
@@ -71,10 +81,12 @@ $(document).ready(function() {
     console.log("add note");
     addNote($("#recipe-list"));
     video.play();
+    checkUndo();
   })
 
   $("#undo").on("click", function() {
     $("#recipe-list").children().last().remove();
+    checkUndo();
   })
 
   $("#finished").on("click", function() {
