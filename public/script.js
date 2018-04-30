@@ -18,8 +18,8 @@ function takeScreenshot(source, dest) {
   dest.scrollTop(dest.prop('scrollHeight'));
 }
 
-function addNote(dest) {
-  var note = $("#note-form").val();
+function addNote(dest, count) {
+  var note = count + ". " + $("#note-form").val();
   var new_note = $("<div>");
   var new_item = $("<li>");
   $(new_note).text(note);
@@ -47,9 +47,12 @@ $(document).ready(function() {
     takeScreenshot(video, $("#recipe-list"));
   })
 
+  var note_count = 0;
+
   $("#add-note").on("click", function() {
     console.log("add note");
-    addNote($("#recipe-list"));
+    addNote($("#recipe-list"), note_count);
+    note_count+
     video.play();
   })
 
