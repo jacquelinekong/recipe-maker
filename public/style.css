@@ -70,6 +70,7 @@ h2 {
 #recipe-list {
   height: 450px;
   overflow-y: scroll;
+  font-size: 14pt;
 }
 
 /* #undo {
