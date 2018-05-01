@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Garlic Salt";
-  src: url("fonts/GarlicSalt-Regular.otf") format("otf");
-
+  src: url("fonts/GarlicSalt-Regular.otf") format("opentype");
 }
 
 video {

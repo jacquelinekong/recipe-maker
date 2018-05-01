@@ -33,7 +33,7 @@
     <div class="row">
     <div class="col-md-6" id="video-interface">
       <div id="vid">
-        <video controls autoplay>
+        <video controls autoplay onclick="this.paused ? this.play() : this.pause()">
           <source src="videos/souffle.mp4" type="video/mp4">
         </video>
       </div>

@@ -1,0 +1,22 @@
+{
+  "name": "make-a-recipe",
+  "version": "1.0.0",
+  "description": "screenshot video recipes into static recipes",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacquelinekong/recipe-maker.git"
+  },
+  "author": "jacqueline.e.kong@columbia.edu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacquelinekong/recipe-maker/issues"
+  },
+  "homepage": "https://github.com/jacquelinekong/recipe-maker#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="script.js"></script>
+
+  <title> Make-a-Recipe </title>
+</head>
+
+<body>
+<div id="container">
+  <nav class="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand">
+            Make-a-Recipe
+          </a>
+        </div>
+        <!-- <ul class="nav navbar-nav navbar-right">
+            <li id="home-button">
+                <a href="#">Home</a>
+            </li>
+        </ul> -->
+      </div>
+  </nav>
+
+  <div id="video-container">
+    <div class="row">
+    <div class="col-md-6" id="video-interface">
+      <div id="vid">
+        <video controls autoplay onclick="this.paused ? this.play() : this.pause()">
+          <source src="videos/apple-crumble.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="row" id="button-row">
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary" id="capture"> Capture </button>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-info" id="back-5"> Back 5 </button>
+        </div>
+        <div class="col-md-1"> </div>
+        <div class="col-md-1">
+          <button type="button" id="play" class="btn btn-info" aria-label="Left Align">
+              <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+          </button>
+          <button type="button" id="pause" class="btn btn-info" aria-label="Left Align">
+              <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="col-md-2"> </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary" id="undo"> Undo </button>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-success" id="finished"> Finished! </button>
+        </div>
+      </div>
+      <form id="note-form">
+        <div class="form-group" id="note-interface">
+          <div class="row">
+            <div class="col-md-10">
+              <label for="note-box">Your notes:</label>
+              <input type="text" class="form-control" id="note-box" placeholder="Chop up onions...">
+            </div>
+            <div class="col-md-2">
+              <label for="add-note"> </label>
+              <button type="button" class="btn btn-primary" id="add-note"> Add a note </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+
+    <div class="col-md-6" id="recipe">
+      <h2> Your Recipe: </h2>
+      <!-- <button type="button" class="btn btn-primary" id="undo"> Remove Last </button> -->
+      <ul id="recipe-list"> </ul>
+    </div>
+    </div>
+  </div>
+
+
+
+</div>
+</body>
+</html>
